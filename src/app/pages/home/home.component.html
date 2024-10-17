@@ -1,0 +1,12 @@
+<div class="card-container d-flex flex-wrap" *ngIf="photoArray.length > 0">
+  <div class="col-2 card" *ngFor="let photo of photoArray">
+    <img src="{{ photo.thumbnailUrl }}" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{{ photo.title }}</h5>
+      <button (click)="liked(photo)" class="btn btn-primary">Mi piace</button>
+      <button (click)="cancella(photo.id)" class="btn btn-danger">
+        Cancellami
+      </button>
+    </div>
+  </div>
+</div>
